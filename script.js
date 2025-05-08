@@ -235,9 +235,52 @@ skal returnere "whao is ohe ptino tf ohis?"
 
 ******************************************************************************/
 
+// Skriv koden for oppgave 4 her
+
 function doubleSwap(string, charA, charB) {
-  // Skriv koden for oppgave 4 her
+  let swaper = [];
+  for (let char of string) {
+    if (char === charA) {
+      swaper.push(charB);
+    } else if (char === charB) {
+      swaper.push(charA);
+    } else {
+      swaper.push(char);
+    }
+  }
+  return swaper.join(``);
 }
+
+const swapedString = doubleSwap("This is a string", "i", "s");
+console.log(swapedString);
+
+const swapedString2 = doubleSwap(
+  "m#ybe #nother #ppro#ch is necess#ry",
+  "#",
+  "a"
+);
+console.log(swapedString2);
+
+const swapedString3 = doubleSwap("what is the point of this?", "o", "t");
+console.log(swapedString3);
+
+// // old non-working version
+// function doubleSwap(string, charA, charB) {
+//   const swaper = [];
+//   for (i = 0; i < string.length; i++) {
+//     if (string[i] == charA) {
+//       string.replace(charA, charB);
+//     }
+//     if (string[i] == charB) {
+//       string.replace(charB, charA);
+//     }
+//     swaper.push(string);
+//   }
+//   return swaper;
+// }
+
+// const swapedString = doubleSwap("This is a string", "i", "s");
+// console.log(swapedString);
 
 /******************************************************************************
 5.
@@ -282,3 +325,5 @@ const greetings = [
 ];
 
 // Skriv koden for oppgave 5 her
+
+function helloChecker() {}
