@@ -264,7 +264,7 @@ console.log(swapedString2);
 const swapedString3 = doubleSwap("what is the point of this?", "o", "t");
 console.log(swapedString3);
 
-// // old non-working version
+// // non-working version
 // function doubleSwap(string, charA, charB) {
 //   const swaper = [];
 //   for (i = 0; i < string.length; i++) {
@@ -326,4 +326,51 @@ const greetings = [
 
 // Skriv koden for oppgave 5 her
 
-function helloChecker() {}
+const languageType = [
+  {
+    phrase: "hello",
+    language: "engelsk",
+  },
+  {
+    phrase: "ciao",
+    language: "italiensk",
+  },
+  {
+    phrase: "salut",
+    language: "fransk",
+  },
+  {
+    phrase: "hallo",
+    language: "tysk",
+  },
+  {
+    phrase: "hola",
+    language: "spansk",
+  },
+  {
+    phrase: "cześć",
+    language: "polsk",
+  },
+];
+
+function helloChecker() {
+  const helloFinder = [];
+  for (let i = 0; i < greetings.length; i++) {
+    let found = false;
+    for (let j = 0; j < languageType.length; j++) {
+      if (greetings[i].toLowerCase().includes(languageType[j].phrase)) {
+        helloFinder.push("HELLO oppdaget på " + languageType[j].language);
+        found = true;
+        break;
+      }
+    }
+    if (!found) {
+      helloFinder.push("Ingen HELLO oppdaget");
+    }
+  }
+  return helloFinder;
+}
+helloChecker();
+
+const universalGreeter = helloChecker();
+console.log(universalGreeter);
